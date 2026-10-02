@@ -1,16 +1,13 @@
-class Solution(object):
-    def maxDepth(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+class Solution:
+    def maxDepth(self, s: str) -> int:
         n = len(s)
-        depth = 0
         max_depth = 0
+        ans = 0
         for ch in s:
-            if ch == '(':
-                depth +=1
-                max_depth = max(max_depth , depth)
+            if ch == "(":
+                max_depth += 1
+                ans = max(max_depth , ans)
             elif ch == ')':
-                depth -= 1
-        return max_depth
+                    max_depth -= 1
+        return ans
+
