@@ -11,8 +11,8 @@ class Solution:
         
         #check for sign
         sign = 1
-        if s[i] == '+' or s[i] == '-':
-            sign = 1 if s[i] == '+' else -1
+        if s[i] in '+-':
+            sign = -1 if s[i] == '-' else 1
             i+= 1
         
         #generate nums
