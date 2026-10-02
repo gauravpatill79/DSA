@@ -1,9 +1,5 @@
-class Solution(object):
-    def myAtoi(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+class Solution:
+    def myAtoi(self, s: str) -> int:
         n = len(s)
         i = 0
         #remove whitespace
@@ -23,7 +19,7 @@ class Solution(object):
         num = 0
 
         while i < n and s[i].isdigit():
-            num = num * 10 + (ord(s[i]) - ord('0'))
+            num = num * 10 + (ord(s[i]) - ord('0')) #math -> to add ele at back and fill it from their 
 
             if sign * num > 2**31-1:
                 return 2**31-1
@@ -32,4 +28,3 @@ class Solution(object):
 
             i+=1
         return sign * num
-            
