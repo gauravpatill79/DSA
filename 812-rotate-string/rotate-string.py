@@ -1,9 +1,3 @@
-class Solution(object):
-    def rotateString(self, s, goal):
-        """
-        :type s: str
-        :type goal: str
-        :rtype: bool
-        """
+class Solution:
+    def rotateString(self, s: str, goal: str) -> bool:
         return len(s) == len(goal) and goal in (s + s)
-        
