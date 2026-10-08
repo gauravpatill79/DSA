@@ -1,9 +1,5 @@
-class Solution(object):
-    def subsets(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+class Solution:
+    def subsets(self, nums: list[int]) -> list[list[int]]:
         ans = []
         def getSubset(index, current):
             #base condition
